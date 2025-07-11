@@ -14,12 +14,39 @@
 #include <iostream>
 #include <vector>
 
+#include "lecture5.hpp"
+
 //======== 1
 // Exercise #1
+
+
+
+int add_num(int a, int b){
+    return a + b;
+  }
+
+void swap_values(int &x, int &y){
+  int temp{x};
+
+  x = y;
+  y = temp;
+
+}
+
+void add_to_sum(int val){
+  int static sum{};
+
+  sum += val;
+
+  std::cout << sum << '\n';
+
+}
 
 int main() {
   //======== 1
   //==============
+  // std::cout << "running function" << '\n';
+  // std::cout << add_num(1, 2) << '\n';
 
   //======== 2
   //==============
@@ -87,10 +114,10 @@ int main() {
   //======== 12
   //==============
 
-  // add_to_sum(1); // 1
-  // add_to_sum(2); // 3
-  // add_to_sum(3); // 6
-  // add_to_sum(4); // 10
+  add_to_sum(1); // 1
+  add_to_sum(2); // 3
+  add_to_sum(3); // 6
+  add_to_sum(4); // 10
 
   //======== 13
   //==============

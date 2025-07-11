@@ -1,3 +1,6 @@
+int add_num(int a, int b);
+
+
 //======== 2
 // void print_hello()
 // {
@@ -55,6 +58,7 @@
 
 //======== 7
 // Exercise 4
+void swap_values(int &x, int &y);
 
 //======== 8
 // void push_ten(std::vector<int> &v) {  // Passed by reference
@@ -226,18 +230,18 @@
 // void func(int a, int b = 5); // Signature: func(int, int) - defaults ignored!
 
 //======== 27
-// void f(int &x, int y, int z)
-// {
-//     x += y + z;
-// }
+void f(int &x, int y, int z)
+{
+    x += y + z;
+}
 
-// int g(int a, int b)
-// {
-//     int result{};
-//     result = a + b;
-//     f(result, a, b);
-//     return result;
-// }
+int g(int a, int b)
+{
+    int result{};
+    result = a + b;
+    f(result, a, b);
+    return result;
+}
 
 //======== 28
 // long long factorial(int n)
@@ -246,3 +250,6 @@
 //         return 1;                // Base case: 0! or 1! is 1
 //     return n * factorial(n - 1); // Recursive call
 // }
+
+
+void add_to_sum(int val);
